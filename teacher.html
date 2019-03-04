@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>站内搜索</title>
+<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link type="image/x-icon" rel="shortcut icon" href="icon.ico">
+<link href="webcss.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.0.custom/jquery-ui.css"/>
+	<!--引用使用ui插件的样式表-->
+	<script src="jquery-ui-1.12.0.custom/external/jquery/jquery.js"></script>
+	<!--引用jq库文件-->
+	<script src="jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+	<!--引用使用ui插件的外部js文件-->
+
+<script type="text/javascript">
+var zxf;
+$(function(){
+var datas=["张惜彤","曾含蕾","李福允","陈寒兰","林寄冬","郑向香"];
+		$("#sousuo").autocomplete({
+			source:datas,//数据源
+		})
+$("#chazhao").click(function(){
+	
+			for(i = 0;i < datas.length;i++){
+				if(datas[i] == $("#sousuo").val())
+					zxf = i;
+				}
+				if(zxf){
+			
+				$("#nameCheck").html("<h3>"+datas[zxf]+"老师</h3><img src='ms/mingshi"+zxf+".PNG' width='20%'>");
+				}
+				else{
+					$("#nameCheck").html("<h3>查无此老师</h3>");
+					}
+  				
+
+			
+	})
+})
+</script>
+</head>
+
+<body>
+
+<div id="top"> <span class="top-left"><b>邦德教育2017-2018年度下学期（寒假及春季）招生</b></span> <span class="top-right"><b>网站导航：<a href="#">邦德官网</a>|<a href="#">邦德学网</a></b></span> </div>
+<div id="logo"> <img src="logo.png" width="250" height="64" style="margin-left:20%"><img src="tel.png" width="164" height="33" style="float:right; margin-right:20%; margin-top:10px;"> </div>
+<div id="shang">
+  <ul id="an1" style=" list-style-type:none; ">
+    <a href="index.html">
+    <li style="height:44px; width:112px;float:left;margin-left:20%;">首页</li>
+    </a> 
+    <li style="height:44px; width:112px;float:left;">站内搜索</li><a href="map.html">
+    <li style="height:44px; width:112px;float:left;">邦德校园</li></a>
+    <a href="news.html">
+    <li style="height:44px; width:112px;float:left;">新闻动态</li>
+    </a> <a href="kecheng.html">
+    <li style="height:44px; width:112px;float:left;">课程专题</li>
+    </a>
+  </ul>
+</div>
+</div>
+
+
+<div id="teacher">
+  <div class="input-group" id="teacher-sousuo"  >
+    <input id="sousuo"  class="form-control"  type="text" placeholder="请输入查找内容..." >
+    
+   	<span class=" input-group-btn">
+        	<button  id="chazhao" class="btn btn-primary" type="button">查找</button>
+    </span>
+    </input>
+  </div>
+  
+  <div id="reply"> 搜索结果:
+ <hr>
+    <div id="nameCheck"><h4>暂无内容</h4></div>
+  </div>
+</div>
+<div id="footer"> 版权所有，盗版必究<br>
+  <img src="gaba.png" width="20" height="20">公安局备案号：20165535138<br>
+  设计师：移动互联网1班38郑秀峰 </div>
+</body>
+</html>

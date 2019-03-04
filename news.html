@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>站内搜索</title>
+<link type="image/x-icon" rel="shortcut icon" href="icon.ico">
+<link href="webcss.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-3.2.1.js"></script>
+
+</head>
+
+<body>
+<script type="text/javascript">
+var zxf;
+function zzz(){
+		alert("请输入标题以及内容");
+		
+		}
+$(function(){
+	$("body").on("click",".zzzz",function(){/*新建节点需要使用on方法绑定body、，才可以使用*/
+		alert("请输入标题以及内容");
+		});
+	$(".tianjia").click(function(){
+		if($("#tj11").val()==""||$("#tj22").val()==""){
+			alert("请输入标题以及内容");
+			return ;
+			}
+		
+		var txt1 = $("#tj11").val();
+		var txt2 = $("#tj22").val();
+		$("#tj11").val("");
+		$("#tj22").val("");
+		var $geshi="<div class='news-son'><span class='new-title'>"+txt1+"</span><span class='delete'>删除</span><br><span class='sp1'>"+txt2+"</span><span class='sp2'>"+getDate()+"</span></div>";
+		$("#news").prepend($geshi);	
+		
+		})
+	
+	
+	function getDate(){
+		debugger;
+		var today = new Date(); 
+		var date; 
+		date = (today.getFullYear()) +"-" + (today.getMonth() + 1 ) + "-" + today.getDate() + "-" + today.toLocaleTimeString(); 
+		return date;
+}
+	$("body").on("click",".delete",function(){
+ 	$(this).parent().remove();
+});
+	$("body").on("click",".new-title,.sp1",function(){
+		var td = $(this); 
+		var txt = td.text(); 
+		var input = $("<input type='text' value='" + txt + "'  style='width:300px;'/>"); 
+		td.html(input); 
+		input.click(function() { return false; }); 
+		//获取焦点 
+		input.trigger("focus"); 
+		//文本框失去焦点后提交内容，重新变为文本 
+		input.blur(function() { 
+		var newtxt = $(this).val();
+		td.html(newtxt);  })
+		})
+	
+	
+})
+</script>
+
+<div id="top"> <span class="top-left"><b>邦德教育2017-2018年度下学期（寒假及春季）招生</b></span> <span class="top-right"><b>网站导航：<a href="#">邦德官网</a>|<a href="#">邦德学网</a></b></span> </div>
+<div id="logo"> <img src="logo.png" width="250" height="64" style="margin-left:20%"><img src="tel.png" width="164" height="33" style="float:right; margin-right:20%; margin-top:10px;"> </div>
+<div id="shang">
+  <ul id="an1" style=" list-style-type:none; ">
+    <a href="index.html">
+    <li style="height:44px; width:112px;float:left;margin-left:20%;">首页</li>
+    </a><a href="teacher.html">
+    <li style="height:44px; width:112px;float:left;">站内搜索</li></a>
+    <a href="map.html">
+    <li style="height:44px; width:112px;float:left;">邦德校园</li>
+    </a>
+    <li style="height:44px; width:112px;float:left;">新闻动态</li>
+     <a href="kecheng.html">
+    <li style="height:44px; width:112px;float:left;">课程专题</li>
+    </a>
+  </ul>
+
+</div>
+<div id="news">
+  <div class="news-son"> 
+  	<span class="new-title">我还没出力你就倒下了</span><span class="delete">删除</span><br>
+    <span class="sp1">老师生气骂学生，学生害怕到晕倒</span>
+    <span class="sp2">2017-12-28-上午1:11:08</span> 
+  </div>
+  <div class="news-son"> 
+  	<span class="new-title">勇敢的少年！</span><span class="delete">删除</span><br>
+    <span class="sp1">零下4℃大学生跳灌渠救人 十几位同学参与救援</span>
+    <span class="sp2">22017-12-28-上午1:11:08</span> 
+  </div>
+  <div class="news-son"> 
+  	<span class="new-title">中老年危机？</span><span class="delete">删除</span><br>
+    <span class="sp1">老师上课沉不住气</span>
+    <span class="sp2">2017-12-28-上午1:11:08</span> 
+  </div>
+  <div class="news-son"> 
+  	<span class="new-title">该怎么管教孩子？</span><span class="delete">删除</span><br>
+    <span class="sp1">孩子老学小猪佩奇！</span>
+    <span class="sp2">2017-12-28-上午1:11:08</span> 
+    
+  </div>
+  <div class="news-son" style="line-height:30px;"> 
+  	添加标题：<span class="tj1"><input id="tj11" type="text"></span><span class="tianjia">添加</span><br>
+    添加内容：<span class="tj2"><input id="tj22" type="text"></span>
+
+   
+    
+  </div>
+ 
+</div>
+<div id="footer"> 版权所有，盗版必究<br>
+  <img src="gaba.png" width="20" height="20">公安局备案号：20165535138<br>
+  设计师：移动互联网1班38郑秀峰 </div>
+  
+</body>
+</html>

@@ -1,0 +1,264 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+#top {/*通用-顶部信息栏*/
+	height: 50px;
+	width: 100%;
+	background-image: url(sc/top/headbg.png);
+	line-height: 50px;
+	min-width: 800px;
+}
+#top .top-left {
+	margin-left: 50px;
+}
+#top .top-right {
+	float: right;
+	margin-right: 50px;
+}
+#logo {
+	min-width: 800px;
+}
+#tabs {/*index-标签页样式*/
+	background: none;
+	border: none;
+	min-width: 1000px;
+	float: left;
+}
+#tabs ul {/*index-内部ul样式*/
+	border: none;
+	background: none;
+	position: absolute;/*使之浮于其他元素之上*/
+	bottom: 5%;
+	left: 47.2%;
+	margin: 0px;
+	padding: 0px;
+}
+#tabs div {
+	padding: 0px;
+	margin: -3.5px;
+}
+#shang li {/*通用-导航栏*/
+	color: White;
+	background-color: #1C91DB;
+	text-align: center;
+	font-size: 15px;
+	line-height: 44px;
+	border-left: 1px solid #006DAF;
+	border-right: 1px solid #006DAF;
+ font-family:@Adobe 黑体 Std R;
+}
+#shang li:hover {/*通用-导航栏*/
+	font: 15px/44px;
+	color: White;
+	background-color: #006DAF;
+ font-family:@Adobe 黑体 Std R;
+	font-weight: 700;
+}
+#shang {/*通用-导航栏确定大小*/
+	width: 100%;
+	
+	background-color: #1C91DB;
+	height: 44px;
+}
+#shang ul {/*通用-导航栏去除不必要边距*/
+	padding: 0px;
+	margin: 0px;
+	margin: 0px auto;
+	min-width: 1000px;/*最小宽度*/
+}
+#center {
+	clear:both;
+	width: 70%;
+	margin:0px auto;
+	min-width:1000px;
+	
+}
+.left {
+	margin-top:20px;
+	width:50%;
+	float:left;
+	text-align:center;
+	margin-bottom:10px;
+}
+.right {
+	margin-top:20px;
+	width:50%;
+	float:left;
+	text-align:center;
+	margin-bottom:10px;
+}
+.title1{
+	
+	font-size:25px;
+	text-decoration:underline;
+	}
+.title2{
+	text-align:left;
+	font:18px/35px 宋体;
+	padding:7% 5% 0px 5%;
+	}
+.title2 span{
+	float:right;
+	color:#999}
+.title2 a{
+	text-decoration:none;
+	color:#333;}
+.title2 a:hover{
+	color:#1C91DB;}
+
+#footer{
+	clear:both;
+	width:100%;
+	background-color:#333;
+	color:#FFF;
+	height:120px;
+	text-align:center;
+	line-height:30px;
+	padding-top:20px;}
+	
+#xia111 {
+	
+	height:310px;
+	width: 70%;
+	margin: 0px auto;
+	background-color: #1C91DB;
+	padding:10px;
+	color:#FFF;
+	
+}
+#xia111 a {
+	color: Black;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 30px;
+}
+#xia111 a:hover {
+	color: #269bc6;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 30px;
+}
+.img {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.img>li {
+	margin-left: 10px;
+	float: left;
+}
+.img>li>img {
+	width: 160px;
+	height: 250px;
+}
+/*站内搜索 */
+#teacher{
+	clear:both;
+	width:60%;
+	height:500px;
+	margin:0px auto;
+	}
+#teacher-sousuo{
+	width: 30%;
+	margin-top: 30px;;
+}
+/*邦德校园*/
+#reply{
+	padding:2%;}
+#dt{
+	width:60%;
+	margin:0px auto;}
+/*新闻动态*/
+#news{
+	width:60%;
+	margin:0px auto;
+}
+.news-son{
+	background-color:#E1F0FF;
+	height:55px;
+	padding:2%;}
+.news-son:hover{
+	background-color:#5AF}
+.new-title{
+	font:19px/30px 微软雅黑;
+	color:#F00;}
+.sp1{
+	font:16px/30px 黑体;
+	color:#333；
+	}
+.sp2{
+	float:right;
+	font:14px/30px 黑体;
+	color:#333；}
+.delete{
+	float:right;
+	}
+.update{
+	float:right;
+	margin-right:20px;}
+.tianjia{
+	float:right;
+	}
+	/*登陆界面*/
+#denglu{
+	width:100%;
+	margin:0px auto;
+	height:700px;;
+	background-image:url(denglubackground.jpg);
+	background-size:100% 100%;
+	padding-top:10%;
+		}
+#denglu-some{
+	margin:0px auto;
+	text-align:center;
+	width:30%;
+	height:50%;
+	
+	border-radius:10px;
+	border:2px solid #CCC;
+	border-color: rgba(255,255,255,0.7);
+	background-image:url(blackbackground.png);}
+#denglu-some span{
+	color:#FFF;}
+	
+	/*课程*/
+#zhong
+{
+	
+width:60%;
+border:1px solid gray;	
+margin:0px auto;
+background-color:#F3F3F3;
+height:750px;
+
+}
+#zhong img{
+	width:100%;}
+#gg{
+	width:60%;
+	margin:0px auto;
+	}
+	
+	#zhong a
+{
+text-decoration:none;
+color:black;
+font:13px/18px 微软雅黑;
+}
+#zhong a:hover
+{
+color:green;
+font:13px/18px 微软雅黑;
+}
+
+.hz
+{
+width:22%;
+border:1px solid gray;
+text-align:center;	
+float:left;
+margin:3px;
+height:150px;
+margin:12px;
+}
